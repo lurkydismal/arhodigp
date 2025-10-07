@@ -36,6 +36,8 @@ using option_t = struct option {
         alias = 0x4,
     };
 
+    using flagUnderlying_t = std::underlying_type_t< flag_t >;
+
     option( std::string_view _name,
             callback_t _callback,
             std::string_view _argument = "",
