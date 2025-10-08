@@ -2,6 +2,7 @@
 
 #include <argp.h>
 
+#include <bit>
 #include <ranges>
 #include <string>
 #include <vector>

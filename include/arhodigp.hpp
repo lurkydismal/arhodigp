@@ -1,11 +1,15 @@
 #pragma once
 
+#include <cstdint>
 #include <format>
 #include <functional>
 #include <gsl/pointers>
 #include <map>
 #include <span>
+#include <string>
 #include <string_view>
+#include <type_traits>
+#include <utility>
 
 namespace arhodigp {
 
