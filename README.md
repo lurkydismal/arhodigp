@@ -68,7 +68,7 @@ List of features:
 Usage: app [OPTION...]
 app_identifier - description
 
-  -v, --Verboe output
+  -v, --Verbose output
   -?, --help                 Give this help list
   --usage                    Give a short usage message
   -V, --version              Print program version
