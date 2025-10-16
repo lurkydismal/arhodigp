@@ -140,7 +140,7 @@ auto parseArguments( std::string_view _format,
                     []( std::string_view _argument ) -> std::string {
                         return ( std::string( _argument ) );
                     } ) |
-                std::ranges::to< std::vector< std::string > >();
+                std::ranges::to< std::vector >();
 
             const auto l_arguments2 =
                 l_arguments1 |
@@ -148,7 +148,7 @@ auto parseArguments( std::string_view _format,
                     []( const std::string& _argument ) -> const char* {
                         return ( _argument.c_str() );
                     } ) |
-                std::ranges::to< std::vector< const char* > >();
+                std::ranges::to< std::vector >();
 
             if ( argp_parse( &l_argumentParser, _arguments.size(),
                              std::bit_cast< char** >( l_arguments2.data() ), 0,
