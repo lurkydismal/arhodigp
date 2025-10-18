@@ -30,7 +30,7 @@ Why this exists:
 * GNU `argp` is fine but low-level and C-style. I wanted a C++-friendly, callback-first interface that:
   * uses `std::string/ std::string_view`, `std::span`, and `std::map` for clarity,
   * encourages small, testable callbacks,
-  * keeps help and grouping semantics from argp but expressed in idiomatic C++ .
+  * keeps help and grouping semantics from `argp` but expressed in idiomatic C++ .
 
 If you like predictable CLIs and hate writing argument parsing glue by hand, this does that job and nothing else.
 
@@ -68,7 +68,6 @@ List of features:
 Usage: app [OPTION...]
 app_identifier - description
 
-  -v, --Verbose output
   -?, --help                 Give this help list
   --usage                    Give a short usage message
   -V, --version              Print program version
@@ -81,7 +80,7 @@ Report bugs to <@example.com>.
 Requirements/ dependencies:
 
 * Linux with glibc (`argp` is a GNU extension — not portable to all platforms)
-* A C++23-capable compiler
+* A C++ 23-capable compiler
 * A GSL implementation exposing `gsl::not_null` (Microsoft GSL or `gsl-lite`)
 
 See `config.sh` for what to include and what to compile
