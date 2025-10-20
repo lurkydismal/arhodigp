@@ -163,9 +163,9 @@ auto parseArguments( std::string_view _format,
     return ( l_returnValue );
 }
 
-void error( const state_t& _state, const std::string& _message ) {
+void error( const state_t& _state, std::string_view _message ) {
     argp_error( std::bit_cast< const argp_state* >( _state ), "%s",
-                _message.c_str() );
+                std::string( _message ).c_str() );
 }
 
 } // namespace arhodigp

@@ -42,6 +42,8 @@ using option_t = struct option {
 
     using flagUnderlying_t = std::underlying_type_t< flag_t >;
 
+    option() = delete;
+
     option( std::string_view _name,
             callback_t _callback,
             std::string_view _argument = "",
@@ -55,7 +57,6 @@ using option_t = struct option {
           group( _group ),
           callback( std::move( _callback ) ) {}
 
-    option() = delete;
     option( const option& ) = default;
     option( option&& ) = default;
     ~option() = default;
@@ -106,7 +107,7 @@ auto parseArguments( std::string_view _format,
                      std::string_view _contactAddress,
                      std::map< int, option_t >& _options ) -> bool;
 
-void error( const state_t& _state, const std::string& _message );
+void error( const state_t& _state, std::string_view _message );
 
 template < typename... Arguments >
 void error( const state_t& _state,
